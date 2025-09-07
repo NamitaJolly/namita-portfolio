@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me – Namita Jolly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f9a8d4, #a5f3fc);
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 12px;
+      color: #111;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a.active {
+      color: #e11d48;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    main.container {
+      padding: 25px;
+      max-width: 800px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    h1, h3 {
+      text-align: center;
+      color: #111;
+    }
+
+    p {
+      line-height: 1.7;
+      color: #111;
+    }
+
+    ul {
+      padding-left: 20px;
+      color: #111;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #111;
+      margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About Me</a>
+      <a href="gallery.html">My Gallery</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="internshipspro.html">Internships & Projects</a>
+    </nav>
+  </header>
+
+  <main class="container fade-in">
+    <p>I am Namita Jolly, a 4th-year B.Tech CSE student at SJCET, Palai. Passionate about technology and innovation, I enjoy exploring diverse domains of computer science, including software development, data science, and web technologies. With a strong aptitude for problem-solving and a keen interest in organizing and coordinating events, I thrive in collaborative environments that encourage creativity, continuous learning, and impactful contributions.</p>
+    
+    <p><strong>Skills:</strong> C, Python, Java, HTML, CSS, JavaScript, React, Flask; OOP, DBMS, Data Structures, OS.</p>
+    
+    <p><strong>Strengths:</strong> Teamwork, Time management, Leadership, Effective communication, Critical thinking.</p>
+    
+    <h3>Experience</h3>
+    <ul>
+      <li><strong>BARC, Mumbai (June–July 2025):</strong> DICOM image analysis for cancer treatment planning. Tech stack: React.js, Canvas API.</li>
+      <li><strong>IMHANS, Kozhikode (June 2024):</strong> Early detection platform for ASD in toddlers. Tech stack: React, Node.js, Spring Boot, SQL.</li>
+      <li><strong>Mini Project – InsightHub:</strong> Personalized news platform with filters, quizzes, and updates. Tech stack: Flask, Python, MongoDB, BeautifulSoup, Gemini AI.</li>
+    </ul>
+  </main>
+
+  <footer>© 2025 Namita Jolly</footer>
+</body>
+</html>

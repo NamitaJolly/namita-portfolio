@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery – Namita Jolly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f9a8d4, #a5f3fc);
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 12px;
+      color: #111;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a.active {
+      color: #e11d48; /* Highlight current page */
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 20px;
+      color: #111;
+    }
+
+    /* Icon style headings */
+    .gallery-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .icon-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      min-width: 180px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .icon-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    }
+
+    .icon-card h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #0f172a;
+    }
+
+    /* Image display area */
+    .gallery-display {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .gallery-display img {
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 0.5s ease;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>My Gallery</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a class="active" href="gallery.html">My Gallery</a>
+    <a href="contact.html">Contact Me</a>
+    <a href="internshipspro.html">Internships & Projects</a>
+  </nav>
+</header>
+
+<h2>Click an icon to see the certificate</h2>
+
+<!-- Icon buttons -->
+<div class="gallery-icons">
+  <div class="icon-card" onclick="showImage('barc')">
+    <h3>BARC Internship</h3>
+  </div>
+  <div class="icon-card" onclick="showImage('imhans')">
+    <h3>IMHANS Internship</h3>
+  </div>
+  <div class="icon-card" onclick="showImage('nasa')">
+    <h3>NASA Hackathon</h3>
+  </div>
+  <div class="icon-card" onclick="showImage('nptel1')">
+    <h3>NPTEL Certification 1</h3>
+  </div>
+  <div class="icon-card" onclick="showImage('nptel2')">
+    <h3>NPTEL Certification 2</h3>
+  </div>
+   <div class="icon-card" onclick="showImage('ieee')">
+    <h3>IEEE Certification</h3>
+  </div>
+  <div class="icon-card" onclick="showImage('ieee')">
+    <h3>IEEE Certification</h3>
+  </div>
+  <div class="icon-card" onclick="showImage('iedc')">
+    <h3>IEDC Certification</h3>
+  </div>
+  <div class="icon-card" onclick="showImage('ieeexplore')">
+    <h3>IEEE Xplore Certification</h3>
+  </div>
+</div>
+
+<!-- Display area for certificates -->
+<div class="gallery-display">
+  <img id="barc" src="images/barc.jpg" alt="BARC Internship" class="hidden">
+  <img id="imhans" src="images/imhans.jpg" alt="IMHANS Internship" class="hidden">
+  <img id="nasa" src="images/nasa.jpg" alt="NASA Hackathon" class="hidden">
+  <img id="nptel1" src="images/nptel1.jpg" alt="NPTEL Certification 1" class="hidden">
+  <img id="nptel2" src="images/nptel2.jpg" alt="NPTEL Certification 2" class="hidden">
+   <img id="ieee" src="images/ieee.jpg" alt="IEEE Certification" class="hidden">
+    <img id="iedc" src="images/iedc.jpg" alt="IEDC Certification"  class="hidden">
+    <img id="ieeexplore" src="images/ieeexplore.jpg" alt="IEEEXplore Certification" class="hidden">
+</div>
+
+<script>
+  let currentVisible = null;
+
+  function showImage(id) {
+    const selected = document.getElementById(id);
+
+    // If already visible, hide it
+    if (currentVisible === id) {
+      selected.classList.add("hidden");
+      currentVisible = null;
+      return;
+    }
+
+    // Hide all first
+    const images = document.querySelectorAll('.gallery-display img');
+    images.forEach(img => img.classList.add('hidden'));
+
+    // Show clicked one
+    selected.classList.remove("hidden");
+    currentVisible = id;
+  }
+</script>
+</body>
+</html>

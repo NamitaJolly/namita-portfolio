@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Me – Namita Jolly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f9a8d4, #a5f3fc);
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 12px;
+      color: #111;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a.active {
+      color: #e11d48; /* Highlighted color for current page */
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin: 40px auto;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #111;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .contact-form button {
+      margin-top: 16px;
+      background: #0ea5e9;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background: #0284c7;
+    }
+
+    .contact-details {
+      text-align: center;
+      margin-top: 20px;
+      color: #111;
+    }
+
+    .contact-details a {
+      color: #0ea5e9;
+      text-decoration: none;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Contact Me</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="gallery.html">My Gallery</a>
+    <a href="contact.html" class="active">Contact Me</a>
+    <a href="internshipspro.html">Internships & Projects</a>
+  </nav>
+</header>
+
+<main>
+  <form class="contact-form">
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name" />
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email" />
+
+    <label>Message</label>
+    <textarea rows="5" placeholder="Type your message..."></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <div class="contact-details">
+    <p><strong>Email:</strong> namitajolly333@gmail.com</p>
+    <p><strong>Phone:</strong> 8547273811</p>
+    <p><strong>LinkedIn:</strong> 
+      <a href="https://www.linkedin.com/in/namita-jolly-196001280" target="_blank">Profile</a>
+    </p>
+  </div>
+</main>
+
+<footer>© 2025 Namita Jolly</footer>
+</body>
+</html>

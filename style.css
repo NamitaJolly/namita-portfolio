@@ -1,0 +1,174 @@
+/* Reset and base styles */
+* { 
+  box-sizing: border-box; 
+}
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0; 
+  color: #222; 
+  background: #f8fafc;
+}
+
+/* Header */
+header {
+  background: #111827; 
+  color: #fff; 
+  padding: 16px 20px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+}
+header h1 { 
+  margin: 0; 
+  font-size: 20px; 
+  letter-spacing: 0.5px; 
+}
+
+/* Navigation */
+nav a {
+  color: #e5e7eb; 
+  text-decoration: none; 
+  margin: 0 10px; 
+  padding: 6px 10px; 
+  border-radius: 8px;
+  transition: transform .2s ease, background .2s ease;
+}
+nav a:hover { 
+  background: #1f2937; 
+  transform: translateY(-2px); 
+}
+nav a.active { 
+  background: #374151; 
+  color: #fff; 
+}
+
+/* Layout containers */
+.container { 
+  max-width: 980px; 
+  margin: 24px auto; 
+  padding: 0 16px; 
+}
+
+/* Cards (Home page links) */
+.cards { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); 
+  gap: 16px; 
+  margin-top: 16px; 
+}
+.card {
+  display: block; 
+  background: #fff; 
+  padding: 16px; 
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06); 
+  text-decoration: none; 
+  color: inherit;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 22px rgba(0,0,0,.1); 
+}
+
+/* Gallery (grid style – used in older version) */
+.gallery {
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 12px;
+}
+.gallery img {
+  width: 100%; 
+  border-radius: 12px; 
+  display: block;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.gallery img:hover { 
+  transform: scale(1.03); 
+  box-shadow: 0 12px 26px rgba(0,0,0,.15); 
+}
+
+/* Gallery with headings (BARC, IMHANS, etc.) */
+.gallery-item {
+  margin-bottom: 20px;
+}
+.gallery-item h3 {
+  cursor: pointer;
+  color: #0ea5e9;
+  transition: color 0.3s ease;
+  margin: 0;
+}
+.gallery-item h3:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+.gallery-item img {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+.hidden {
+  display: none;
+}
+
+/* Forms */
+.form {
+  background: #fff; 
+  padding: 16px; 
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06); 
+  max-width: 520px;
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 10px;
+}
+.form input, .form select, .form textarea {
+  padding: 10px; 
+  border: 1px solid #cbd5e1; 
+  border-radius: 8px; 
+  background: #fff;
+}
+
+/* Buttons */
+button {
+  background: #0ea5e9; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 14px; 
+  border-radius: 10px; 
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+button:hover { 
+  transform: translateY(-1px); 
+  filter: brightness(1.05); 
+}
+
+/* Split layout (Contact page) */
+.split { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 20px; 
+}
+@media (min-width: 900px) { 
+  .split { grid-template-columns: 1fr 1fr; } 
+}
+
+/* Footer */
+footer { 
+  text-align: center; 
+  padding: 24px; 
+  color: #6b7280; 
+}
+
+/* Animations */
+.fade-in { 
+  animation: fade .5s ease-out both; 
+}
+@keyframes fade { 
+  from { opacity: 0; transform: translateY(6px); } 
+  to { opacity: 1; transform: none; } 
+}
