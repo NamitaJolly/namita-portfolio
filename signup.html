@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signup | Namita Jolly</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #f9a8d4, #a5f3fc);
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 12px;
+      color: #111;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a.active {
+      color: #e11d48;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    main.container {
+      padding: 25px;
+      max-width: 700px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+      color: #111;
+      margin-bottom: 20px;
+    }
+
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    form button {
+      background: #e11d48;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: #be123c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #111;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Namita Jolly</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="gallery.html">My Gallery</a>
+    <a href="contact.html">Contact Me</a>
+    <a href="signup.html" class="active">Signup</a>
+  </nav>
+</header>
+
+<main class="container fade-in">
+  <h2>Create Your Account</h2>
+  <form action="#" method="post">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="password" name="confirmpassword" placeholder="Confirm Password" required>
+    <input type="date" name="dob" placeholder="Date of Birth" required>
+    <select name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="female">Female</option>
+      <option value="male">Male</option>
+      <option value="other">Other</option>
+    </select>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="address" placeholder="Address" required>
+    <input type="text" name="city" placeholder="City" required>
+    <input type="text" name="state" placeholder="State" required>
+    <input type="text" name="country" placeholder="Country" required>
+    <input type="text" name="zipcode" placeholder="Zip Code" required>
+    <textarea name="bio" placeholder="Short Bio/About Yourself" rows="3"></textarea>
+    <input type="url" name="linkedin" placeholder="LinkedIn Profile URL">
+    <input type="url" name="github" placeholder="GitHub Profile URL">
+    <button type="submit">Register</button>
+  </form>
+</main>
+
+<footer>© 2025 Namita Jolly</footer>
+
+</body>
+</html>
